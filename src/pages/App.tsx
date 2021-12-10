@@ -1,7 +1,7 @@
 import ApeModeQueryParamReader from 'hooks/useApeModeQueryParamReader'
 import { Route, Switch } from 'react-router-dom'
 import styled from 'styled-components/macro'
-
+import './App.css'
 import GoogleAnalyticsReporter from '../components/analytics/GoogleAnalyticsReporter'
 import AddressClaimModal from '../components/claim/AddressClaimModal'
 import ErrorBoundary from '../components/ErrorBoundary'
@@ -12,6 +12,7 @@ import Web3ReactManager from '../components/Web3ReactManager'
 import { useModalOpen, useToggleModal } from '../state/application/hooks'
 import { ApplicationModal } from '../state/application/reducer'
 import DarkModeQueryParamReader from '../theme/DarkModeQueryParamReader'
+//import { ReactComponent as Background } from '../theme/background.svg'
 import AddLiquidity from './AddLiquidity'
 import { RedirectDuplicateTokenIds } from './AddLiquidity/redirects'
 import { RedirectDuplicateTokenIdsV2 } from './AddLiquidityV2/redirects'
@@ -30,6 +31,9 @@ import Swap from './Swap'
 import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
 import Vote from './Vote'
 import VotePage from './Vote/VotePage'
+//import { ReactComponent as LayImge } from '../theme/layerimg.svg'
+import { ReactComponent as LeftImage } from '../theme/leftimage.svg'
+import { ReactComponent as RightImage } from '../theme/rightimage.svg'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -45,7 +49,6 @@ const BodyWrapper = styled.div`
   align-items: center;
   flex: 1;
   z-index: 1;
-
   ${({ theme }) => theme.mediaWidth.upToSmall`
     padding: 6rem 16px 16px 16px;
   `};
@@ -73,6 +76,11 @@ function TopLevelModals() {
 export default function App() {
   return (
     <ErrorBoundary>
+      {/* <div style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0 }}>
+        <Background style={{ position: 'absolute', height: '100%', width: '100%' }} />
+      </div> */}
+
+      {/* <LayImge style={{ position: 'absolute', height: '100%', width: '100%' }} /> */}
       <Route component={GoogleAnalyticsReporter} />
       <Route component={DarkModeQueryParamReader} />
       <Route component={ApeModeQueryParamReader} />
@@ -82,6 +90,8 @@ export default function App() {
             <Header />
           </HeaderWrapper>
           <BodyWrapper>
+            <LeftImage className="left" />
+            <RightImage className="right" />
             <Popups />
             <Polling />
             <TopLevelModals />
