@@ -1,32 +1,147 @@
-@media only screen and (min-width: 1200px) and (max-width: 1500px) {
-  .left{
-    width: 350px;
-    height: 66px;
-    position: absolute;
-  }
-  .right{
-    width: 350px;
-    height: 66px;
-    position: absolute;
-  }
-  }
-  
-  @media only screen and (min-width: 1500px){
-    .left{
-      width: 500px;
-      height: 66px;
-      position: absolute;
-    }
-    .right{
-      width: 500px;
-      height: 66px;
-      position: absolute;
-    }
-    }
-  
-    @media only screen and (max-width: 992px){
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
   .right {
-      position: absolute;
-      bottom: 106px;
+    width: 300px;
+    right: 0;
   }
-    }
+  .left,
+  .right {
+    height: 70vh !important;
+    bottom: 0;
+    width: 330px !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .left,
+  .right {
+    width: 390px !important;
+    height: 95vh !important;
+    bottom: 0;
+    position: absolute;
+  }
+}
+
+.left,
+.right {
+  width: 550px;
+  height: 95vh;
+  bottom: 0;
+  position: absolute;
+}
+
+.right {
+  top: 60px;
+  right: 0;
+}
+
+.left {
+  left: -35px;
+  top: 100px;
+}
+@media only screen and (max-width: 992px) {
+   
+  .left {
+    width: auto;
+    height: 265px;
+    position: relative;
+    display: none;
+    top: 0;
+  }
+  .right {
+    width: auto;
+    height: 265px;
+    position: relative;
+    bottom: -30px;
+    display: none;
+  }
+}
+
+/* @media only screen and (min-width: 992px) and (max-width: 1000px) {
+ 
+  .left {
+    width: auto;
+    height: 265px;
+    position: relative;
+    top: 0;
+
+  }
+  .right {
+    width: auto;
+    height: 265px;
+    position: relative;
+    bottom: -30px;
+  }
+} */
+
+/* 
+.left {
+  width: 550px;
+  height: 100vh;
+  position: absolute;
+  bottom: 0px;
+  left: -20px;
+  top: 10px;
+  position: absolute;
+}
+.right {
+  width: 550px;
+  height: 100vh;
+  position: absolute;
+  bottom: 0px;
+  top: 25px;
+  right: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  body {
+    height: 130vh;
+  }
+  .left {
+    width: auto;
+    height: 265px;
+    position: relative;
+  }
+  .right {
+    width: auto;
+    height: 265px;
+    position: relative;
+    bottom: -30px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .left {
+    width: 320px;
+    height: 100vh;
+    position: absolute;
+    bottom: 0px;
+    left: -20px;
+    top: 10px;
+    position: absolute;
+  }
+  .right {
+    width: 321px;
+    height: 100vh;
+    position: absolute;
+    bottom: 0px;
+    /* top: 25px; 
+    right: 0;
+  }
+} */
+
+/* @media only screen and (min-width: 1200px) and (max-width: 1500px) {
+  .left {
+    width: 550px;
+    height: 100vh;
+    position: absolute;
+    bottom: -205px;
+    left: -45px;
+    position: absolute;
+  }
+  .right {
+    width: 550px;
+    height: 100vh;
+    position: absolute;
+    bottom: -148px;
+    right:0
+  }
+} */

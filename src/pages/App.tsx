@@ -91,7 +91,6 @@ export default function App() {
           </HeaderWrapper>
           <BodyWrapper>
             <LeftImage className="left" />
-            <RightImage className="right" />
             <Popups />
             <Polling />
             <TopLevelModals />
@@ -135,6 +134,7 @@ export default function App() {
               <Route exact strict path="/create-proposal" component={CreateProposal} />
               <Route component={RedirectPathToSwapOnly} />
             </Switch>
+            <RightImage className="right" />
             <Marginer />
           </BodyWrapper>
         </AppWrapper>

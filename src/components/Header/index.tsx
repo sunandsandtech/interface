@@ -40,7 +40,7 @@ const HeaderFrame = styled.div<{ showBackground: boolean }>`
   z-index: 21;
   position: relative;
   /* Background slide effect on scroll. */
-  background-image: ${({ theme }) => `linear-gradient(to bottom, transparent 50%, ${theme.bg0} 50% )}}`};
+  background-image: ${({ theme }) => `linear-gradient(to bottom, transparent 50%, #1567FB 50% )}}`};
   background-position: ${({ showBackground }) => (showBackground ? '0 -100%' : '0 0')};
   background-size: 100% 200%;
   box-shadow: 0px 0px 0px 1px ${({ theme, showBackground }) => (showBackground ? theme.bg2 : 'transparent;')};
@@ -175,6 +175,21 @@ const Title = styled.a`
     cursor: pointer;
   }
 `
+const AElement = styled.a`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: ${({ theme }) => theme.bg1};
+  border-radius: 12px;
+  white-space: nowrap;
+  text-decoration: none;
+  width: 100%;
+  padding: 10px 22px;
+  color: ${({ theme }) => theme.text2};
+  :focus {
+    border: 1px solid blue;
+  }
+`
 
 const UniIcon = styled.div`
   transition: transform 0.3s ease;
@@ -302,6 +317,10 @@ export default function Header() {
       </HeaderLinks>
 
       <HeaderControls>
+        <AElement href="http://www.digifittoken.com/">
+          <Trans>Home</Trans>
+        </AElement>
+
         <HeaderElement>
           <NetworkSelector />
         </HeaderElement>
